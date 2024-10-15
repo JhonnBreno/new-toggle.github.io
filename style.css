@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://images.pexels.com/photos/28874283/pexels-photo-28874283/free-photo-of-espaco-de-trabalho-minimo-com-laptop-e-caneca-de-cafe.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+    background-size: 100vh;
+    width: 100vh;
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position:center center;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+body.dark-mode{
+    background-image: url(https://images.pexels.com/photos/27163466/pexels-photo-27163466/free-photo-of-mulher-mao-sombrio-escuro.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+    width: 100vh;
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position:center center;
+    transition: 0.4s;
+}
+.switch{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -150%);
+}
+.switch input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.switch label{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: grey;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 200px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.727);
+}
+.switch label::before{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    transition: 0.4s;
+}
+.switch input:checked + label{
+    background-color: black;
+}
+.switch input:checked +label::before{
+    transform: translateX(100px);
+    background-image: url(https://images.pexels.com/photos/47367/full-moon-moon-bright-sky-47367.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: center center;
+    object-fit: cover;
+    box-shadow: inset 2px 2px 5px;
+}
